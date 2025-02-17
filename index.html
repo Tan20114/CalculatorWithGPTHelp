@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  
+  <script src="./script.js"></script>
+
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="case">
+    <div class="head">
+      <h1 style="font-size: 2rem;">calc.</h1>
+      <div class="theme-toggle">
+        <button data-theme="default">1</button>
+        <button data-theme="light">2</button>
+        <button data-theme="violet">3</button>
+    </div>
+    </div>
+    <div class="screen">
+      <H1 id="screen-num">0</H1>
+    </div>
+    <div class="panel">
+      <h1 id="7" class="math">7</h1>
+      <h1 id="8" class="math">8</h1>
+      <h1 id="9" class="math">9</h1>
+      <h1 class="del-related" id="del">DEL</h1>
+      <h1 id="4" class="math">4</h1>
+      <h1 id="5" class="math">5</h1>
+      <h1 id="6" class="math">6</h1>
+      <h1 id="+" class="math">+</h1>
+      <h1 id="1" class="math">1</h1>
+      <h1 id="2" class="math">2</h1>
+      <h1 id="3" class="math">3</h1>
+      <h1 id="-" class="math">-</h1>
+      <h1 id="." class="math">.</h1>
+      <h1 id="0" class="math">0</h1>
+      <h1 id="/" class="math">/</h1>
+      <h1 id="*" class="math">*</h1>
+      <h1 class="del-related" style="grid-column-start: 1; grid-column-end: 3;" id="reset">reset</h1>
+      <h1 id="calculate" style="grid-column-start: 3; grid-column-end: 5;">=</h1>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Tan20114" target="_blank">Tan20114</a>.
+  </div>
+</body>
+</html>

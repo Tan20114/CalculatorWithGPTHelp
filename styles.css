@@ -1,0 +1,154 @@
+:root {
+    --bg: hsl(222, 26%, 31%);
+    --toggle-bg: hsl(223, 31%, 20%);
+    --screen-bg: hsl(224, 36%, 15%);
+    --key-bg: hsl(225, 21%, 49%);
+    --key-shadow: hsl(224, 28%, 35%);
+    --key-red: hsl(6, 63%, 50%);
+    --key-red-shadow: hsl(6, 70%, 34%);
+    --key-light: hsl(30, 25%, 89%);
+    --key-light-shadow: hsl(28, 16%, 65%);
+    --text-primary: #fff;
+    --text-secondary: hsl(221, 14%, 31%);
+  }
+  
+  [data-theme="light"] {
+    --bg: hsl(0, 0%, 90%);
+    --toggle-bg: hsl(0, 5%, 81%);
+    --screen-bg: hsl(0, 0%, 93%);
+    --key-bg: hsl(185, 42%, 37%);
+    --key-shadow: hsl(185, 58%, 25%);
+    --key-red: hsl(25, 98%, 40%);
+    --key-red-shadow: hsl(25, 99%, 27%);
+    --key-light: hsl(45, 7%, 89%);
+    --key-light-shadow: hsl(35, 11%, 61%);
+    --text-primary: hsl(60, 10%, 19%);
+    --text-secondary: hsl(60, 10%, 19%);
+  }
+  
+  [data-theme="violet"] {
+    --bg: hsl(268, 75%, 9%);
+    --toggle-bg: hsl(268, 71%, 12%);
+    --screen-bg: hsl(268, 71%, 12%);
+    --key-bg: hsl(281, 89%, 26%);
+    --key-shadow: hsl(285, 91%, 52%);
+    --key-red: hsl(176, 100%, 44%);
+    --key-red-shadow: hsl(177, 92%, 70%);
+    --key-light: hsl(268, 47%, 21%);
+    --key-light-shadow: hsl(290, 70%, 36%);
+    --text-primary: #fff;
+    --text-secondary: hsl(52, 100%, 62%);
+  }
+  
+  body {
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+  }
+  
+  .screen {
+    color: var(--text-primary);
+    background: var(--screen-bg);
+    text-align: right;
+    padding-right: 10px;
+  }
+  
+  .case {
+    background: var(--bg);
+    padding: 10px;
+  }
+  
+  .head {
+    display: flex;
+    color: var(--text-primary);
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+  
+  .theme-toggle button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: var(--key-bg);
+    color: var(--text-primary);
+    transition: 0.2s;
+  }
+  
+  .theme-toggle button:hover {
+    background: var(--key-red);
+  }
+  
+  .panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin-top: 15px;
+  }
+  
+  .panel .math,
+  .panel #del,
+  .panel #reset,
+  .panel #calculate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 100%;
+    height: 70px;
+    font-size: 2rem;
+    transition: 0.2s;
+  }
+  
+  .panel .math {
+    color: var(--text-secondary);
+    background: var(--key-light);
+    box-shadow: 0 5px 0 var(--key-light-shadow);
+  }
+  
+  .panel .math:active {
+    box-shadow: 0 2px 0 var(--key-light-shadow);
+    transform: translateY(3px);
+  }
+  
+  .panel #del,
+  .panel #reset {
+    color: var(--text-primary);
+    background: var(--key-bg);
+    box-shadow: 0 5px 0 var(--key-shadow);
+  }
+  
+  .panel #del:active,
+  .panel #reset:active {
+    box-shadow: 0 2px 0 var(--key-shadow);
+    transform: translateY(3px);
+  }
+  
+  .panel #reset,
+  .panel #calculate {
+    grid-column: span 2;
+  }
+  
+  .panel #calculate {
+    background: var(--key-red);
+    box-shadow: 0 5px 0 var(--key-red-shadow);
+  }
+  
+  .panel #calculate:active {
+    box-shadow: 0 2px 0 var(--key-red-shadow);
+    transform: translateY(3px);
+  }
+  
+  @media (max-width: 400px) {
+    .case { max-width: 300px; }
+    .screen { font-size: 1.5rem; padding: 10px; }
+    .panel .math, .panel #del, .panel #reset, .panel #calculate {
+      height: 60px;
+      font-size: 1.5rem;
+    }
+  }
+  
